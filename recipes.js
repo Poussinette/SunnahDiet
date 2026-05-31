@@ -1,3 +1,60 @@
+// ─── UI Translations ────────────────────────────────────────────────────────
+const ui = {
+  en: {
+    searchPlaceholder: "Search recipes, ingredients, or hadith…",
+    noResults: "No recipes found. Try a different search.",
+    hadithRef: "📖 Hadith Reference",
+    ingredients: "Ingredients",
+    instructions: "Instructions",
+    historicalNote: "📝 Historical Note",
+    prep: "Prep",
+    cook: "Cook",
+    serves: "Serves",
+    headerSubtitle: "Authentic recipes from the beloved foods of the Prophet Muhammad ﷺ, sourced from trusted hadith of the Sunnah.",
+    footerTagline: "Recipes sourced from authentic hadith collections.",
+    footerSources: "All hadith references are from Sahih al-Bukhari, Sahih Muslim, Sunan Abu Dawud, and Sunan Ibn Majah.",
+    footerDua: "May Allah bless us in following the Sunnah of His Messenger ﷺ",
+    filterAll: "All",
+    categories: {
+      "Porridge":          "Porridge",
+      "Stew":              "Stew",
+      "Main Dish":         "Main Dish",
+      "Breakfast":         "Breakfast",
+      "Drink":             "Drink",
+      "Drink / Snack":     "Drink / Snack",
+      "Condiment / Snack": "Condiment / Snack",
+      "Dessert / Snack":   "Dessert / Snack"
+    }
+  },
+  fr: {
+    searchPlaceholder: "Rechercher des recettes, ingrédients ou hadiths…",
+    noResults: "Aucune recette trouvée. Essayez une autre recherche.",
+    hadithRef: "📖 Référence Hadith",
+    ingredients: "Ingrédients",
+    instructions: "Instructions",
+    historicalNote: "📝 Note Historique",
+    prep: "Prép.",
+    cook: "Cuisson",
+    serves: "Portions",
+    headerSubtitle: "Recettes authentiques tirées des aliments bien-aimés du Prophète Muhammad ﷺ, issues des hadiths fiables de la Sunnah.",
+    footerTagline: "Recettes tirées de collections de hadiths authentiques.",
+    footerSources: "Toutes les références de hadiths proviennent du Sahih al-Bukhari, du Sahih Muslim, du Sunan Abu Dawud et du Sunan Ibn Majah.",
+    footerDua: "Qu'Allah nous bénisse en suivant la Sunnah de Son Messager ﷺ",
+    filterAll: "Tout",
+    categories: {
+      "Porridge":          "Bouillie",
+      "Stew":              "Ragoût",
+      "Main Dish":         "Plat Principal",
+      "Breakfast":         "Petit-déjeuner",
+      "Drink":             "Boisson",
+      "Drink / Snack":     "Boisson / Collation",
+      "Condiment / Snack": "Condiment / Collation",
+      "Dessert / Snack":   "Dessert / Collation"
+    }
+  }
+};
+
+// ─── Recipe Data ─────────────────────────────────────────────────────────────
 const recipes = [
   {
     id: 1,
@@ -31,7 +88,29 @@ const recipes = [
       "Stir in the honey — do not add honey while boiling, as heat reduces its benefits.",
       "Serve warm in a bowl, optionally garnished with pitted dates on the side."
     ],
-    notes: "Aisha (RA) used to recommend Talbina for the sick and the grieving, saying it was what the Prophet ﷺ recommended."
+    notes: "Aisha (RA) used to recommend Talbina for the sick and the grieving, saying it was what the Prophet ﷺ recommended.",
+    fr: {
+      name: "Talbina",
+      description: "Une bouillie d'orge apaisante mélangée avec du lait et du miel, louée par le Prophète ﷺ pour réconforter le cœur du malade.",
+      hadith_text: "La talbina procure du repos au cœur du malade, le réconforte et dissipe une partie de sa tristesse et de son chagrin.",
+      ingredients: [
+        "2 cuillères à soupe de farine d'orge (finement moulue)",
+        "2 tasses de lait entier",
+        "1 cuillère à soupe de miel pur",
+        "Une pincée de sel",
+        "Facultatif : quelques dattes pour servir"
+      ],
+      instructions: [
+        "Dans une casserole, mélanger la farine d'orge avec un peu de lait froid pour obtenir une pâte lisse sans grumeaux.",
+        "Incorporer progressivement le reste du lait en remuant continuellement à feu moyen-doux.",
+        "Continuer à remuer doucement pendant que le mélange chauffe, pour éviter la formation de grumeaux.",
+        "Laisser mijoter à feu doux pendant 10 à 15 minutes, en remuant fréquemment, jusqu'à ce que la bouillie épaississe et soit onctueuse.",
+        "Retirer du feu et laisser refroidir légèrement.",
+        "Incorporer le miel — ne pas l'ajouter pendant l'ébullition, car la chaleur réduit ses bienfaits.",
+        "Servir chaud dans un bol, éventuellement garni de dattes dénoyautées sur le côté."
+      ],
+      notes: "Aïcha (RA) recommandait la Talbina aux malades et aux personnes en deuil, affirmant que c'était ce que le Prophète ﷺ prescrivait."
+    }
   },
   {
     id: 2,
@@ -77,7 +156,41 @@ const recipes = [
       "Ladle the hot stew generously over the bread, ensuring the bread soaks up the broth.",
       "Serve immediately while hot, traditionally eaten communally from one large dish."
     ],
-    notes: "Tharid was known in Arabia as the king of foods. The bread soaks the flavorful broth, creating a dish that is nourishing and deeply satisfying."
+    notes: "Tharid was known in Arabia as the king of foods. The bread soaks the flavorful broth, creating a dish that is nourishing and deeply satisfying.",
+    fr: {
+      name: "Tharid",
+      description: "Un copieux ragoût de viande et légumes versé sur du pain azyme émietté — décrit par le Prophète ﷺ comme le meilleur de tous les aliments.",
+      hadith_text: "La supériorité de Aïcha sur toutes les autres femmes est comme la supériorité du Tharid sur tous les autres aliments.",
+      ingredients: [
+        "500 g d'agneau ou de mouton, morceaux avec os",
+        "2 grands oignons, grossièrement hachés",
+        "3 gousses d'ail, émincées",
+        "2 tomates moyennes, coupées en dés",
+        "2 carottes moyennes, coupées en morceaux",
+        "2 pommes de terre moyennes, coupées en morceaux",
+        "1 cuillère à café de cumin",
+        "1 cuillère à café de coriandre moulue",
+        "½ cuillère à café de curcuma",
+        "½ cuillère à café de poivre noir",
+        "Sel selon le goût",
+        "3 cuillères à soupe d'huile d'olive",
+        "4 tasses d'eau ou de bouillon d'agneau",
+        "4 pains plats arabes (khubz) ou pains pita"
+      ],
+      instructions: [
+        "Chauffer l'huile d'olive dans une grande cocotte à feu vif. Faire dorer les morceaux d'agneau de tous les côtés jusqu'à ce qu'ils soient bien colorés, puis les réserver.",
+        "Dans la même cocotte, faire revenir les oignons jusqu'à ce qu'ils soient translucides, environ 5 minutes.",
+        "Ajouter l'ail, le cumin, la coriandre, le curcuma et le poivre noir. Remuer pendant 1 minute jusqu'à ce que les épices embaument.",
+        "Remettre l'agneau dans la cocotte. Ajouter les tomates et mélanger en cuisant pendant 3 minutes.",
+        "Verser l'eau ou le bouillon et porter à ébullition. Réduire le feu, couvrir et laisser mijoter 30 minutes.",
+        "Ajouter les carottes et les pommes de terre, et continuer à mijoter pendant encore 25 à 30 minutes jusqu'à ce que la viande soit tendre.",
+        "Ajuster l'assaisonnement avec du sel.",
+        "Déchirer ou émietter le pain plat dans un grand plat creux ou un bol.",
+        "Verser généreusement le ragoût chaud sur le pain pour qu'il absorbe le bouillon.",
+        "Servir immédiatement pendant que c'est chaud, traditionnellement partagé communautairement dans un grand plat."
+      ],
+      notes: "Le Tharid était connu en Arabie comme le roi des aliments. Le pain imbibe le savoureux bouillon, créant un plat nourrissant et profondément satisfaisant."
+    }
   },
   {
     id: 3,
@@ -116,7 +229,34 @@ const recipes = [
       "The broth should be flavorful and slightly thickened from the pumpkin.",
       "Serve in bowls garnished with fresh coriander, with flatbread on the side."
     ],
-    notes: "Anas ibn Malik (RA) noted that the Prophet ﷺ particularly loved pumpkin (dubbaa). This love was so well-known that companions would add pumpkin to dishes when hosting him."
+    notes: "Anas ibn Malik (RA) noted that the Prophet ﷺ particularly loved pumpkin (dubbaa). This love was so well-known that companions would add pumpkin to dishes when hosting him.",
+    fr: {
+      name: "Dubbaa (Citrouille) à la Viande Séchée",
+      description: "Un plat simple de gourde et viande séchée. Le Prophète ﷺ fut observé en train de ramasser avec délice des morceaux de citrouille dans son bol.",
+      hadith_text: "J'ai vu le Prophète ﷺ servi d'une soupe contenant de la courge et de la viande séchée, et je l'ai vu ramasser les morceaux de courge et les manger.",
+      ingredients: [
+        "400 g de citrouille ou gourde jaune, pelée et coupée en cubes",
+        "200 g de viande séchée d'agneau ou de bœuf, finement tranchée",
+        "1 grand oignon, émincé",
+        "2 gousses d'ail, émincées",
+        "2 cuillères à soupe d'huile d'olive",
+        "½ cuillère à café de poivre noir",
+        "½ cuillère à café de coriandre moulue",
+        "Sel selon le goût",
+        "2 tasses d'eau",
+        "Feuilles de coriandre fraîche pour garnir"
+      ],
+      instructions: [
+        "Chauffer l'huile d'olive dans une casserole à feu moyen. Ajouter les oignons et les faire revenir jusqu'à ce qu'ils soient légèrement dorés.",
+        "Ajouter l'ail et la viande séchée, en remuant pendant 2 à 3 minutes.",
+        "Ajouter les cubes de citrouille et mélanger pour les enrober d'huile et d'épices.",
+        "Assaisonner avec le poivre noir, la coriandre et le sel.",
+        "Verser l'eau, porter à ébullition, puis réduire le feu et laisser mijoter à couvert pendant 20 à 25 minutes jusqu'à ce que la citrouille soit tendre.",
+        "Le bouillon doit être savoureux et légèrement épaissi grâce à la citrouille.",
+        "Servir dans des bols garnis de coriandre fraîche, avec du pain plat en accompagnement."
+      ],
+      notes: "Anas ibn Malik (RA) a noté que le Prophète ﷺ aimait particulièrement la citrouille (dubbaa). Cet amour était si connu que les compagnons en ajoutaient aux plats lorsqu'ils le recevaient."
+    }
   },
   {
     id: 4,
@@ -149,11 +289,32 @@ const recipes = [
       "Consume in the morning before eating anything else, as per the Sunnah practice.",
       "Optionally, a small amount of black seed oil can be added for additional blessing."
     ],
-    notes: "The Prophet ﷺ would often break his fast with odd numbers of dates. Ajwa dates from Al-Madinah are specifically mentioned in authentic narrations for their protective qualities."
+    notes: "The Prophet ﷺ would often break his fast with odd numbers of dates. Ajwa dates from Al-Madinah are specifically mentioned in authentic narrations for their protective qualities.",
+    fr: {
+      name: "Dattes avec Beurre et Pain",
+      description: "Un petit-déjeuner simple et béni combinant des dattes Ajwa avec du beurre, de la façon dont le Prophète ﷺ commençait sa journée.",
+      hadith_text: "Quiconque mange sept dattes Ajwa chaque matin ne sera pas atteint par un poison ni par la magie ce jour-là jusqu'au soir.",
+      ingredients: [
+        "7 dattes Ajwa (ou dattes Medjool en alternative)",
+        "2 cuillères à soupe de beurre non salé pur ou de ghee",
+        "2 tranches de pain d'orge ou de galette de blé complet",
+        "Facultatif : un léger filet d'huile de nigelle pure"
+      ],
+      instructions: [
+        "Sélectionner sept dattes Ajwa mûres et charnues. Si vous utilisez d'autres variétés, choisissez la meilleure qualité disponible.",
+        "Laisser ramollir le beurre ou le ghee à température ambiante.",
+        "Réchauffer légèrement le pain d'orge si désiré.",
+        "Étaler une généreuse couche de beurre ou de ghee sur le pain.",
+        "Disposer les dattes à côté ou sur le pain.",
+        "Consommer le matin avant de manger autre chose, conformément à la pratique de la Sunnah.",
+        "Éventuellement, une petite quantité d'huile de nigelle peut être ajoutée pour une bénédiction supplémentaire."
+      ],
+      notes: "Le Prophète ﷺ rompait souvent son jeûne avec un nombre impair de dattes. Les dattes Ajwa de Al-Madinah sont spécifiquement mentionnées dans les narrations authentiques pour leurs propriétés protectrices."
+    }
   },
   {
     id: 5,
-    name: "Honey Drink (Nabeeth)",
+    name: "Honey Drink",
     arabic: "شراب العسل",
     category: "Drink",
     description: "A warm honey-based drink. The Prophet ﷺ loved sweetness and honey, and it is mentioned as a cure in both the Quran and the Sunnah.",
@@ -181,7 +342,27 @@ const recipes = [
       "If using saffron, steep a few strands in a teaspoon of warm water for 2 minutes, then add to the cup.",
       "Drink slowly, ideally in the morning on an empty stomach or before sleep."
     ],
-    notes: "Allah mentions honey in Surah An-Nahl (16:69): 'There comes forth from their bellies a drink of varying colours wherein is healing for people.' The Prophet ﷺ himself used honey medicinally and consumed it regularly."
+    notes: "Allah mentions honey in Surah An-Nahl (16:69): 'There comes forth from their bellies a drink of varying colours wherein is healing for people.' The Prophet ﷺ himself used honey medicinally and consumed it regularly.",
+    fr: {
+      name: "Boisson au Miel",
+      description: "Une boisson chaude à base de miel. Le Prophète ﷺ aimait les aliments sucrés et le miel, mentionné comme remède dans le Coran et la Sunnah.",
+      hadith_text: "Utilisez les deux remèdes : le miel et le Coran.",
+      ingredients: [
+        "1 à 2 cuillères à soupe de miel cru non filtré (Sidr ou Manuka de préférence)",
+        "1 tasse d'eau chaude (non bouillante — pour préserver les propriétés du miel)",
+        "Facultatif : une petite pincée de nigelle moulue (Nigella sativa)",
+        "Facultatif : quelques fils de safran infusés dans de l'eau chaude"
+      ],
+      instructions: [
+        "Chauffer l'eau jusqu'à ce qu'elle soit tiède — environ 40°C (104°F). Ne pas porter à pleine ébullition car cela détruit les enzymes bénéfiques du miel.",
+        "Verser l'eau tiède dans une tasse.",
+        "Ajouter une à deux cuillères à soupe de miel et remuer doucement jusqu'à dissolution complète.",
+        "Si vous utilisez de la nigelle, ajouter une petite pincée et mélanger.",
+        "Si vous utilisez du safran, laisser infuser quelques fils dans une cuillère à café d'eau chaude pendant 2 minutes, puis ajouter à la tasse.",
+        "Boire lentement, idéalement le matin à jeun ou avant le sommeil."
+      ],
+      notes: "Allah mentionne le miel dans la Sourate An-Nahl (16:69) : « Il en sort une boisson de couleurs variées, contenant une guérison pour les hommes. » Le Prophète ﷺ utilisait lui-même le miel comme remède et en consommait régulièrement."
+    }
   },
   {
     id: 6,
@@ -215,7 +396,29 @@ const recipes = [
       "Add a pinch of salt and optional rose water.",
       "Drink immediately or allow to thicken slightly and eat with a spoon."
     ],
-    notes: "Sawiq was a staple of the Prophet's ﷺ diet, particularly during journeys. It was valued for being lightweight, long-lasting, and highly nutritious — a perfect travel food."
+    notes: "Sawiq was a staple of the Prophet's ﷺ diet, particularly during journeys. It was valued for being lightweight, long-lasting, and highly nutritious — a perfect travel food.",
+    fr: {
+      name: "Sawiq (Boisson à l'Orge Grillée)",
+      description: "Une préparation nourrissante à base de farine d'orge grillée, consommée par le Prophète ﷺ et ses compagnons comme aliment rapide et sustentant lors des voyages.",
+      hadith_text: "Le Prophète ﷺ et ses compagnons partirent en état d'Ihram et ils n'avaient avec eux que du Sawiq et des dattes.",
+      ingredients: [
+        "4 cuillères à soupe de farine d'orge",
+        "1,5 tasse d'eau ou de lait",
+        "1 cuillère à soupe de miel ou de dattes (pour sucrer)",
+        "Une pincée de sel",
+        "Facultatif : quelques gouttes d'eau de rose"
+      ],
+      instructions: [
+        "Faire griller la farine d'orge à sec dans une poêle à feu moyen-doux, en remuant constamment, pendant 5 à 8 minutes jusqu'à ce qu'elle soit dorée et parfumée. Surveiller attentivement pour éviter de brûler.",
+        "Retirer du feu et laisser refroidir légèrement.",
+        "Dans une tasse ou un bol, mélanger la farine d'orge grillée avec de l'eau ou du lait.",
+        "Bien remuer jusqu'à obtenir un mélange lisse. La consistance doit être buvable — rallonger avec plus de liquide si nécessaire.",
+        "Sucrer avec du miel ou incorporer des dattes molles dénoyautées.",
+        "Ajouter une pincée de sel et éventuellement de l'eau de rose.",
+        "Boire immédiatement ou laisser légèrement épaissir et manger à la cuillère."
+      ],
+      notes: "Le Sawiq était un aliment de base du régime du Prophète ﷺ, notamment lors des voyages. Il était apprécié pour être léger, durable et très nutritif — un aliment de voyage idéal."
+    }
   },
   {
     id: 7,
@@ -248,7 +451,28 @@ const recipes = [
       "Tear the bread into pieces and dip directly into the mixture.",
       "Consume as a light meal or accompaniment, as the Prophet ﷺ and his companions would."
     ],
-    notes: "This simple combination reflects the blessed frugality of the Prophet's ﷺ table. Both olive oil and vinegar were readily available in the Arabian Peninsula and surrounding regions."
+    notes: "This simple combination reflects the blessed frugality of the Prophet's ﷺ table. Both olive oil and vinegar were readily available in the Arabian Peninsula and surrounding regions.",
+    fr: {
+      name: "Trempette Pain au Vinaigre et Huile d'Olive",
+      description: "Une trempette humble mais bénie de vinaigre et d'huile d'olive pour le pain — deux aliments que le Prophète ﷺ a spécifiquement loués.",
+      hadith_text: "Quel bon condiment que le vinaigre. Ô Allah, bénis l'huile d'olive et l'olivier.",
+      ingredients: [
+        "3 cuillères à soupe d'huile d'olive extra vierge",
+        "1 cuillère à soupe de vinaigre de cidre de pomme ou de vinaigre de vin blanc",
+        "Une pincée de sel grossier",
+        "Une pincée de thym séché ou de za'atar (facultatif)",
+        "Pain d'orge ou galette de blé complet pour tremper"
+      ],
+      instructions: [
+        "Verser l'huile d'olive dans un petit bol peu profond.",
+        "Verser le vinaigre sur l'huile d'olive — ils ne s'émulsionneront pas complètement, ce qui est normal.",
+        "Saupoudrer d'une pincée de sel grossier.",
+        "Ajouter du thym séché ou du za'atar si désiré.",
+        "Déchirer le pain en morceaux et tremper directement dans le mélange.",
+        "Consommer comme repas léger ou accompagnement, comme le faisaient le Prophète ﷺ et ses compagnons."
+      ],
+      notes: "Cette simple combinaison reflète la frugalité bénie de la table du Prophète ﷺ. L'huile d'olive et le vinaigre étaient facilement disponibles dans la péninsule arabique et les régions environnantes."
+    }
   },
   {
     id: 8,
@@ -280,39 +504,92 @@ const recipes = [
       "Optionally add a very light drizzle of honey and garnish with mint leaves.",
       "Eat by taking a bite of watermelon and a bite of date together to experience the flavour combination the Prophet ﷺ enjoyed."
     ],
-    notes: "Aisha (RA) reported this pairing. It reflects the wisdom of the Sunnah: the cooling nature of watermelon is balanced by the warming, energy-rich quality of dates — a combination modern nutrition confirms as complementary."
+    notes: "Aisha (RA) reported this pairing. It reflects the wisdom of the Sunnah: the cooling nature of watermelon is balanced by the warming, energy-rich quality of dates — a combination modern nutrition confirms as complementary.",
+    fr: {
+      name: "Pastèque aux Dattes Fraîches",
+      description: "Une combinaison rafraîchissante de pastèque fraîche consommée avec des dattes mûres — un accord que le Prophète ﷺ lui-même pratiquait.",
+      hadith_text: "Le Prophète ﷺ avait l'habitude de manger de la pastèque avec des dattes fraîches.",
+      ingredients: [
+        "4 épaisses tranches de pastèque mûre et fraîche",
+        "10 à 12 dattes fraîches mûres (rutab — stade mou)",
+        "Facultatif : un filet de miel",
+        "Facultatif : quelques feuilles de menthe fraîche"
+      ],
+      instructions: [
+        "Réfrigérer la pastèque pendant au moins une heure avant de servir.",
+        "Sélectionner des dattes fraîches mûres au stade rutab (molles, partiellement mûries) — elles doivent être douces et sucrées.",
+        "Couper la pastèque en tranches épaisses et les disposer sur une assiette.",
+        "Placer les dattes fraîches à côté ou sur la pastèque.",
+        "Éventuellement, ajouter un très léger filet de miel et garnir de feuilles de menthe.",
+        "Manger en prenant une bouchée de pastèque et une bouchée de datte ensemble pour reproduire la combinaison de saveurs appréciée par le Prophète ﷺ."
+      ],
+      notes: "Aïcha (RA) a rapporté cette combinaison. Elle reflète la sagesse de la Sunnah : la nature rafraîchissante de la pastèque est équilibrée par les qualités réchauffantes et énergétiques des dattes — une combinaison que la nutrition moderne confirme comme complémentaire."
+    }
   }
 ];
 
+// ─── State ───────────────────────────────────────────────────────────────────
+let currentLang  = "en";
 let activeFilter = "All";
-let searchQuery = "";
+let searchQuery  = "";
 
-function getCategories() {
-  const cats = ["All", ...new Set(recipes.map(r => r.category))];
-  return cats;
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+function t(key) {
+  return ui[currentLang][key];
 }
 
+function localField(recipe, field) {
+  if (currentLang === "fr" && recipe.fr && recipe.fr[field] !== undefined) {
+    return recipe.fr[field];
+  }
+  return recipe[field];
+}
+
+function getCategories() {
+  return ["All", ...new Set(recipes.map(r => r.category))];
+}
+
+function displayCategory(cat) {
+  if (cat === "All") return t("filterAll");
+  return t("categories")[cat] || cat;
+}
+
+// ─── Filtering ────────────────────────────────────────────────────────────────
 function filterRecipes() {
   return recipes.filter(r => {
     const matchCat = activeFilter === "All" || r.category === activeFilter;
     const q = searchQuery.toLowerCase();
-    const matchSearch =
-      !q ||
-      r.name.toLowerCase().includes(q) ||
-      r.arabic.includes(q) ||
-      r.description.toLowerCase().includes(q) ||
-      r.hadith.text.toLowerCase().includes(q);
-    return matchCat && matchSearch;
+    if (!q) return matchCat;
+    const name  = localField(r, "name").toLowerCase();
+    const desc  = localField(r, "description").toLowerCase();
+    const hText = (currentLang === "fr" && r.fr?.hadith_text
+      ? r.fr.hadith_text
+      : r.hadith.text).toLowerCase();
+    return matchCat && (name.includes(q) || r.arabic.includes(q) || desc.includes(q) || hText.includes(q));
+  });
+}
+
+// ─── Render ───────────────────────────────────────────────────────────────────
+function applyUI() {
+  document.getElementById("search-input").placeholder        = t("searchPlaceholder");
+  document.getElementById("header-subtitle").textContent     = t("headerSubtitle");
+  document.getElementById("section-hadith-label").textContent= t("hadithRef");
+  document.getElementById("section-ingredients").textContent = t("ingredients");
+  document.getElementById("section-instructions").textContent= t("instructions");
+  document.getElementById("section-notes-label").textContent = t("historicalNote");
+  document.getElementById("footer-tagline").textContent      = t("footerTagline");
+  document.getElementById("footer-sources").textContent      = t("footerSources");
+  document.getElementById("footer-dua").textContent          = t("footerDua");
+  document.querySelectorAll(".lang-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.lang === currentLang);
   });
 }
 
 function renderFilters() {
   const container = document.getElementById("filters");
   container.innerHTML = getCategories()
-    .map(
-      cat => `<button class="filter-btn ${cat === activeFilter ? "active" : ""}"
-        onclick="setFilter('${cat}')">${cat}</button>`
-    )
+    .map(cat => `<button class="filter-btn ${cat === activeFilter ? "active" : ""}"
+        onclick="setFilter('${cat}')">${displayCategory(cat)}</button>`)
     .join("");
 }
 
@@ -320,65 +597,57 @@ function renderCards() {
   const grid = document.getElementById("recipe-grid");
   const list = filterRecipes();
   if (list.length === 0) {
-    grid.innerHTML = `<div class="no-results">No recipes found. Try a different search.</div>`;
+    grid.innerHTML = `<div class="no-results">${t("noResults")}</div>`;
     return;
   }
-  grid.innerHTML = list
-    .map(
-      r => `
+  grid.innerHTML = list.map(r => `
     <article class="recipe-card" onclick="openRecipe(${r.id})">
       <div class="card-emoji">${r.image}</div>
       <div class="card-body">
-        <span class="category-tag">${r.category}</span>
-        <h3 class="card-name">${r.name}</h3>
+        <span class="category-tag">${displayCategory(r.category)}</span>
+        <h3 class="card-name">${localField(r, "name")}</h3>
         <p class="card-arabic">${r.arabic}</p>
-        <p class="card-desc">${r.description}</p>
+        <p class="card-desc">${localField(r, "description")}</p>
         <div class="card-meta">
-          <span>⏱ Prep: ${r.prepTime}</span>
-          <span>🔥 Cook: ${r.cookTime}</span>
-          <span>🍽 Serves: ${r.servings}</span>
+          <span>⏱ ${t("prep")}: ${r.prepTime}</span>
+          <span>🔥 ${t("cook")}: ${r.cookTime}</span>
+          <span>🍽 ${t("serves")}: ${r.servings}</span>
         </div>
         <div class="card-hadith-preview">
           <span class="hadith-source">${r.hadith.source} #${r.hadith.number}</span>
         </div>
       </div>
-    </article>`
-    )
-    .join("");
-}
-
-function setFilter(cat) {
-  activeFilter = cat;
-  renderFilters();
-  renderCards();
+    </article>`).join("");
 }
 
 function openRecipe(id) {
   const r = recipes.find(x => x.id === id);
   if (!r) return;
 
-  document.getElementById("modal-emoji").textContent = r.image;
-  document.getElementById("modal-name").textContent = r.name;
-  document.getElementById("modal-arabic").textContent = r.arabic;
-  document.getElementById("modal-category").textContent = r.category;
-  document.getElementById("modal-desc").textContent = r.description;
-  document.getElementById("modal-prep").textContent = r.prepTime;
-  document.getElementById("modal-cook").textContent = r.cookTime;
+  const hadithText = currentLang === "fr" && r.fr?.hadith_text ? r.fr.hadith_text : r.hadith.text;
+
+  document.getElementById("modal-emoji").textContent    = r.image;
+  document.getElementById("modal-name").textContent     = localField(r, "name");
+  document.getElementById("modal-arabic").textContent   = r.arabic;
+  document.getElementById("modal-category").textContent = displayCategory(r.category);
+  document.getElementById("modal-desc").textContent     = localField(r, "description");
+  document.getElementById("modal-prep").textContent     = r.prepTime;
+  document.getElementById("modal-cook").textContent     = r.cookTime;
   document.getElementById("modal-servings").textContent = r.servings;
 
-  document.getElementById("modal-hadith-text").textContent = `"${r.hadith.text}"`;
+  document.getElementById("modal-hadith-text").textContent = `"${hadithText}"`;
   document.getElementById("modal-hadith-meta").textContent =
     `${r.hadith.narrator} — ${r.hadith.source}, Hadith No. ${r.hadith.number}`;
 
-  document.getElementById("modal-ingredients").innerHTML = r.ingredients
-    .map(i => `<li>${i}</li>`)
-    .join("");
+  document.getElementById("modal-ingredients").innerHTML =
+    localField(r, "ingredients").map(i => `<li>${i}</li>`).join("");
 
-  document.getElementById("modal-instructions").innerHTML = r.instructions
-    .map((step, idx) => `<li><span class="step-num">${idx + 1}</span>${step}</li>`)
-    .join("");
+  document.getElementById("modal-instructions").innerHTML =
+    localField(r, "instructions")
+      .map((step, idx) => `<li><span class="step-num">${idx + 1}</span>${step}</li>`)
+      .join("");
 
-  document.getElementById("modal-notes").textContent = r.notes;
+  document.getElementById("modal-notes").textContent = localField(r, "notes");
 
   document.getElementById("recipe-modal").classList.add("open");
   document.body.style.overflow = "hidden";
@@ -389,7 +658,23 @@ function closeModal() {
   document.body.style.overflow = "";
 }
 
+// ─── Actions ──────────────────────────────────────────────────────────────────
+function setFilter(cat) {
+  activeFilter = cat;
+  renderFilters();
+  renderCards();
+}
+
+function setLanguage(lang) {
+  currentLang = lang;
+  applyUI();
+  renderFilters();
+  renderCards();
+}
+
+// ─── Init ─────────────────────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
+  applyUI();
   renderFilters();
   renderCards();
 

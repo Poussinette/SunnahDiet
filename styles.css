@@ -25,6 +25,40 @@ body {
   min-height: 100vh;
 }
 
+/* ─── Language Toggle ───────────────────────────────── */
+.lang-toggle {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 0.25rem;
+  z-index: 10;
+}
+
+.lang-btn {
+  background: rgba(255,255,255,0.12);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.75);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lang-btn:hover {
+  background: rgba(255,255,255,0.22);
+  color: var(--white);
+}
+
+.lang-btn.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--green);
+}
+
 /* ─── Header ────────────────────────────────────────── */
 header {
   background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%);

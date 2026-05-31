@@ -10,10 +10,14 @@
 
   <!-- ── Header ────────────────────────────────────── -->
   <header>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+      <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+    </div>
     <div class="header-ornament">✦ ✦ ✦</div>
     <h1>Sunnah Diet</h1>
     <p class="header-arabic">سُنَّة النَّبِيِّ ﷺ في الطَّعَام</p>
-    <p>Authentic recipes from the beloved foods of the Prophet Muhammad ﷺ, sourced from trusted hadith of the Sunnah.</p>
+    <p id="header-subtitle"></p>
     <p class="salawat">اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبِيِّنَا مُحَمَّد</p>
   </header>
 
@@ -25,7 +29,7 @@
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
       </svg>
-      <input id="search-input" type="text" placeholder="Search recipes, ingredients, or hadith…" />
+      <input id="search-input" type="text" />
     </div>
 
     <!-- Category Filters -->
@@ -49,9 +53,9 @@
         <p id="modal-arabic"></p>
         <p id="modal-desc"></p>
         <div class="modal-meta">
-          <span>⏱ Prep<strong id="modal-prep"></strong></span>
-          <span>🔥 Cook<strong id="modal-cook"></strong></span>
-          <span>🍽 Serves<strong id="modal-servings"></strong></span>
+          <span id="modal-prep-label">⏱ <strong id="modal-prep"></strong></span>
+          <span id="modal-cook-label">🔥 <strong id="modal-cook"></strong></span>
+          <span id="modal-servings-label">🍽 <strong id="modal-servings"></strong></span>
         </div>
       </div>
 
@@ -60,22 +64,22 @@
 
         <!-- Hadith Reference -->
         <div class="hadith-block">
-          <div class="hadith-label">📖 Hadith Reference</div>
+          <div class="hadith-label" id="section-hadith-label"></div>
           <p id="modal-hadith-text"></p>
           <p id="modal-hadith-meta"></p>
         </div>
 
         <!-- Ingredients -->
-        <h3 class="section-title">Ingredients</h3>
+        <h3 class="section-title" id="section-ingredients"></h3>
         <ul id="modal-ingredients"></ul>
 
         <!-- Instructions -->
-        <h3 class="section-title">Instructions</h3>
+        <h3 class="section-title" id="section-instructions"></h3>
         <ol id="modal-instructions"></ol>
 
         <!-- Notes -->
         <div class="notes-block">
-          <div class="notes-label">📝 Historical Note</div>
+          <div class="notes-label" id="section-notes-label"></div>
           <p id="modal-notes"></p>
         </div>
 
@@ -85,9 +89,9 @@
 
   <!-- ── Footer ─────────────────────────────────────── -->
   <footer>
-    <p><strong>Sunnah Diet</strong> — Recipes sourced from authentic hadith collections.</p>
-    <p>All hadith references are from <strong>Sahih al-Bukhari</strong>, <strong>Sahih Muslim</strong>, <strong>Sunan Abu Dawud</strong>, and <strong>Sunan Ibn Majah</strong>.</p>
-    <p style="margin-top:0.5rem; font-size:0.8rem; opacity:0.6;">May Allah bless us in following the Sunnah of His Messenger ﷺ</p>
+    <p><strong>Sunnah Diet</strong> — <span id="footer-tagline"></span></p>
+    <p id="footer-sources"></p>
+    <p style="margin-top:0.5rem; font-size:0.8rem; opacity:0.6;" id="footer-dua"></p>
   </footer>
 
   <script src="recipes.js"></script>
