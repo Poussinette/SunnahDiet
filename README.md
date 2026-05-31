@@ -2,6 +2,8 @@
 
 > Authentic recipes from the beloved foods of the Prophet Muhammad ﷺ, sourced from trusted hadith of the Sunnah.
 
+**🌐 Live site: [poussinette.github.io/SunnahDiet](https://poussinette.github.io/SunnahDiet/)**
+
 A static website presenting detailed recipes of meals mentioned in authenticated hadith collections, with full bilingual support (English / French).
 
 ---
