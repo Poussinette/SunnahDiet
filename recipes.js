@@ -475,6 +475,60 @@ const recipes = [
     }
   },
   {
+    id: 9,
+    name: "Cucumber with Fresh Dates",
+    arabic: "القثاء مع الرطب",
+    category: "Dessert / Snack",
+    description: "A simple and blessed pairing of cool fresh cucumber eaten with ripe dates — directly observed and narrated by the companion Abdullah ibn Ja'far (RA) from the Prophet ﷺ.",
+    prepTime: "5 min",
+    cookTime: "0 min",
+    servings: 2,
+    image: "🥒",
+    hadith: {
+      text: "I saw the Prophet ﷺ eating fresh dates with snake cucumbers.",
+      source: "Sahih al-Bukhari",
+      number: "5447",
+      narrator: "Narrated by Abdullah ibn Ja'far (RA)"
+    },
+    ingredients: [
+      "1 large fresh cucumber, chilled",
+      "10–12 fresh ripe dates (rutab — soft stage)",
+      "Pinch of coarse salt (optional)",
+      "A few fresh mint leaves (optional)"
+    ],
+    instructions: [
+      "Chill the cucumber in the refrigerator for at least 30 minutes before serving.",
+      "Wash the cucumber thoroughly. Slice into thick rounds or halve lengthwise and cut into spears.",
+      "Select fresh ripe dates in the rutab stage — they should be soft, moist, and naturally sweet.",
+      "Arrange the cucumber slices and dates together on a plate.",
+      "Optionally sprinkle a small pinch of coarse salt over the cucumber to enhance its flavour.",
+      "Garnish with mint leaves if desired.",
+      "Eat a piece of cucumber together with a date in the same bite, as the Prophet ﷺ was observed doing."
+    ],
+    notes: "Ibn al-Qayyim al-Jawziyya commented on this pairing in Zad al-Ma'ad: 'The cucumber is cold and moist... so it is proper to combine it with something that corrects its coldness and moisture, as the Messenger of Allah ﷺ did when he ate it with fresh dates.' The same pairing is confirmed in Sahih Muslim #2043, also narrated by Abdullah ibn Ja'far (RA).",
+    fr: {
+      name: "Concombre aux Dattes Fraîches",
+      description: "Une association simple et bénie de concombre frais et croquant avec des dattes mûres — directement observée et rapportée par le compagnon Abdullah ibn Ja'far (RA) du Prophète ﷺ.",
+      hadith_text: "J'ai vu le Prophète ﷺ manger des dattes fraîches avec des concombres.",
+      ingredients: [
+        "1 grand concombre frais, réfrigéré",
+        "10 à 12 dattes fraîches mûres (rutab — stade mou)",
+        "Une pincée de sel grossier (facultatif)",
+        "Quelques feuilles de menthe fraîche (facultatif)"
+      ],
+      instructions: [
+        "Réfrigérer le concombre pendant au moins 30 minutes avant de servir.",
+        "Laver soigneusement le concombre. Le couper en rondelles épaisses ou en deux dans la longueur puis en bâtonnets.",
+        "Sélectionner des dattes fraîches mûres au stade rutab — elles doivent être molles, humides et naturellement sucrées.",
+        "Disposer les tranches de concombre et les dattes ensemble sur une assiette.",
+        "Saupoudrer éventuellement d'une petite pincée de sel grossier sur le concombre pour rehausser sa saveur.",
+        "Garnir de feuilles de menthe si désiré.",
+        "Manger un morceau de concombre avec une datte en même temps, comme le Prophète ﷺ a été observé le faire."
+      ],
+      notes: "Ibn al-Qayyim al-Jawziyya a commenté cette association dans Zad al-Ma'ad : « Le concombre est froid et humide... il convient donc de l'associer à quelque chose qui corrige sa froideur et son humidité, comme le faisait le Messager d'Allah ﷺ en le mangeant avec des dattes fraîches. » La même association est confirmée dans le Sahih Muslim #2043, également narré par Abdullah ibn Ja'far (RA)."
+    }
+  },
+  {
     id: 8,
     name: "Watermelon with Fresh Dates",
     arabic: "البطيخ مع الرطب",
